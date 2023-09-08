@@ -1,0 +1,28 @@
+
+
+---
+title: Week One Summary
+author: Miles Franck
+date: 9/5/23
+---
+
+# Professional Précis
+Miles Franck
+
+
+Hi welcome to my website. I will be updating it from time to time with details of my work.
+
+## Software Engineering Book
+
+#### Summary
+
+The book is about the concept of software engineering and its broader scope. The book talks about not just coding but also the tools and processes used to develop and maintain code over time. It raises questions about how programmers can maintain code and good coding practice to ensure that the code is able to last a long time. The key idea is that software engineering is "programming integrated over time
+
+
+
+#### Reflection and Action Items
+
+I feel as software engineers we need to be mindful of how we decide to code our program. We need to think about the long term, our program is going to be used and maintained by people years after us. We must ensure that what we decide to do doesn't make life hard for the people after us. For example we should find a way to get the program to run on every OS.
+
+
+
