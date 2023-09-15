@@ -14,9 +14,23 @@ Hi welcome to my website. I will be updating it from time to time with details o
 
 ## Software Engineering Book
 
+
+## Week One
+
 #### Summary
 
-The book is about the concept of software engineering and its broader scope. The book talks about not just coding but also the tools and processes used to develop and maintain code over time. It raises questions about how programmers can maintain code and good coding practice to ensure that the code is able to last a long time. The key idea is that software engineering is "programming integrated over time
+Programing over time talks about how software engineering is not only about writing code but also the tools and processes that an organization uses to build and maintain code over time. It talks about three fundamental principles. Time and Change (how code needs to adapt over its life), Scale and Growth (how organizations must adapt), and Trade-offs and Costs (how decisions are made). This part also talks about Googles perspective about the growth and evolution of a sustainable software ecosystem, stemming from our scale and longevity.
+
+
+#### Reflection
+This content emphasizes that software engineering should look at the bigger picture. It's not just about creating code but also about how it grows and changes over time. Google's focus on culture, processes, and tools shows that successful software development is a team effort that needs ongoing improvement.
+
+## Week Two
+
+#### Summary
+
+
+This part of the book highlights the importance of scalability in software engineering, encompassing various dimensions like code sustainability, human effort, and computational resources. It underscores the significance of identifying policies that may not scale well within an organization. The book also it emphasizes the value of scalable practices, such as the "Beyoncé Rule" and knowledge sharing, for long-term software success. The concept of "shifting left" is introduced, highliting the importance of early issue detection in the software development process. The text also defines "cost" comprehensively, including both financial and non-financial factors, promoting informed decision-making. Through some examples, it illustrates the concept of trade-offs and the need for careful consideration of costs and benefits. It also distinguishes the difference between programming and software engineering,
 
 
 
