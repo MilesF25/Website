@@ -1,0 +1,4 @@
+- source: website2.qmd
+  netlify:
+    - id: eef0c4ce-69e5-4f04-b5de-1620fa6e7ed7
+      url: 'https://sensational-truffle-0cb905.netlify.app'
