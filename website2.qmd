@@ -12,17 +12,56 @@ Miles Franck
 
 Hi welcome to my website. I will be updating it from time to time with details of my work.
 
-## Software Engineering Book
+## Software Engineering Book and Fuzzing Book
 
-#### Summary
 
-The book is about the concept of software engineering and its broader scope. The book talks about not just coding but also the tools and processes used to develop and maintain code over time. It raises questions about how programmers can maintain code and good coding practice to ensure that the code is able to last a long time. The key idea is that software engineering is "programming integrated over time
+## Week One
+
+#### Summary SE1
+
+Programing over time talks about how software engineering is not only about writing code but also the tools and processes that an organization uses to build and maintain code over time. It talks about three fundamental principles. Time and Change (how code needs to adapt over its life), Scale and Growth (how organizations must adapt), and Trade-offs and Costs (how decisions are made). This part also talks about Googles perspective about the growth and evolution of a sustainable software ecosystem, stemming from our scale and longevity.
+
+#### FB1
+This chapter talks the importance of testing code. Testing your code is important part of software development because it makes sure that your code is correct. In order to make sure you code works you create test cases. The point of test cases is to make sure your code does what it's supposed to do. 
+
+#### Reflection
+This content emphasizes that software engineering should look at the bigger picture. It's not just about creating code but also about how it grows and changes over time. Google's focus on culture, processes, and tools shows that successful software development is a team effort that needs ongoing improvement.
+
+#### Reflection FB1
+When we are making test cases we need to make sure that we account for everything. In FB1 there was a test case that would check to see if the square root of 4 is 2. The problem with this test is that it doesm't take into account rounding errors and it doesn't check if the correct input was entered. When making test cases we need to make sure we cover every possibilty.
+
+## Week Two
+
+
+#### SE2
+
+
+This part of the book highlights the importance of scalability in software engineering, encompassing various dimensions like code sustainability, human effort, and computational resources. It underscores the significance of identifying policies that may not scale well within an organization. The book also it emphasizes the value of scalable practices, such as the "Beyoncé Rule" and knowledge sharing, for long-term software success. The concept of "shifting left" is introduced, highliting the importance of early issue detection in the software development process. The text also defines "cost" comprehensively, including both financial and non-financial factors, promoting informed decision-making. Through some examples, it illustrates the concept of trade-offs and the need for careful consideration of costs and benefits. It also distinguishes the difference between programming and software engineering,
 
 
 
 #### Reflection and Action Items
 
 I feel as software engineers we need to be mindful of how we decide to code our program. We need to think about the long term, our program is going to be used and maintained by people years after us. We must ensure that what we decide to do doesn't make life hard for the people after us. For example we should find a way to get the program to run on every OS.
+
+
+#### FB2
+
+
+
+
+
+#### SE4
+
+SE4 talks about the importace of working with people. The book emphasiszes that programming is not just about coding but it's also about working together.
+The book gives some examples of famous people like Bill Gates or Linus. They didn't develop all of Linux or Microsoft on their own, they might have started
+but they didn't do everything, they had a team to help them. This leads into the next topic "It's all about the team". In this part it talks about the three
+pillars of social interaction humility, respect, and trust.
+
+#### SE4 Refelction
+
+After reading SE4, it's clear that we should all be mindful of how we communicate, especially when discussing someone else's code. If we come across as too critical, it can discourage the original coder from participating and make others hesitant to share their work for fear of harsh feedback. To create a more welcoming environment, we should aim for open and constructive discussions that encourage everyone to actively engage and improve together as a team.
+
 
 
 
