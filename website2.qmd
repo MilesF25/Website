@@ -27,6 +27,13 @@ I feel as software engineers we need to be mindful of how we decide to code our 
 
 #### FB2
 
+This chapter talks about code coverage. Code coverage is measuring which parts of a program are actually executed during a test run. This is important because test your code will guarantee that your code works and seeing what happens during a test run can help you understand your code more and allows to make improvements.The book also talked about black box and white box testing. Black box fuzzing, also known as "blind fuzzing," is a testing technique where the tester has no knowledge of the internal structure or source code of the target software. Testers treat the software as a "black box" and focus solely on the inputs and outputs. Another way is called white box testing. White box fuzzing, also known as "smart fuzzing" or "code-aware fuzzing," involves testing a program with an understanding of its internal structure, such as the source code, algorithms, or data structures.
+
+
+#### Action
+
+The book gave some libaries to use for covering code. I think that this will be a big help when we want to go over our code
+
 
 
 
