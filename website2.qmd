@@ -14,6 +14,8 @@ Hi welcome to my website. I will be updating it from time to time with details o
 
 ## Software Engineering Book
 
+### Week 1
+
 #### Summary
 
 The book is about the concept of software engineering and its broader scope. The book talks about not just coding but also the tools and processes used to develop and maintain code over time. It raises questions about how programmers can maintain code and good coding practice to ensure that the code is able to last a long time. The key idea is that software engineering is "programming integrated over time
@@ -25,29 +27,93 @@ The book is about the concept of software engineering and its broader scope. The
 I feel as software engineers we need to be mindful of how we decide to code our program. We need to think about the long term, our program is going to be used and maintained by people years after us. We must ensure that what we decide to do doesn't make life hard for the people after us. For example we should find a way to get the program to run on every OS.
 
 
+#### FB1
+
+his chapter talks about the importance of testing in software development, The purpose of testing code is to find bugs, enhance your code and to make sure your code is reliable. Even though testing your code is important, it does not mean your code will work as intended.
+
+#### Reflection and Action Items
+
+Learning about how to make sure our program works will be very helpful. As of now I don't know many ways to make sure my code works. All I know is that 
+if I get the expected output then it must be correct.
+
+
+
+### Week 2
+
+
 #### FB2
 
 This chapter talks about code coverage. Code coverage is measuring which parts of a program are actually executed during a test run. This is important because test your code will guarantee that your code works and seeing what happens during a test run can help you understand your code more and allows to make improvements.The book also talked about black box and white box testing. Black box fuzzing, also known as "blind fuzzing," is a testing technique where the tester has no knowledge of the internal structure or source code of the target software. Testers treat the software as a "black box" and focus solely on the inputs and outputs. Another way is called white box testing. White box fuzzing, also known as "smart fuzzing" or "code-aware fuzzing," involves testing a program with an understanding of its internal structure, such as the source code, algorithms, or data structures.
 
 
-#### Action
+####  Reflection and Action
 
-The book gave some libaries to use for covering code. I think that this will be a big help when we want to go over our code
+The book gave some libaries to use for covering code. I think that this will be a big help when we want to go over our code. I think
+that using these to help test our code is a good idea, but we should also try to make our own, even though that would be more work I think
+it would be cool if we made our own libary just for Chasten.
 
 
 
+#### SE2
+
+In SE2 it talks how software engineering is porgramming overtime. It uses Hyrum's law as a good explination of what this means. Hyrum's law says that
+as software is used by more people, they will come to rely on its existing behavior, even if that behavior was not initially intended or documented. This law talks about the importance of maintaining backward compatibility and consistency in software interfaces, as changes can inadvertently disrupt users.
+It also talks about how software engineering unlike solitary programming, thrives on collaborative efforts. Success in software engineering hinges on anticipating and adapting to changes, both during development and post-release. Striking a balance between resource allocation, whether time or cost, and anticipated software benefits is vital. Software engineering projects are engineered for lasting impact, designed to endure for years.
 
 
-#### SE4
+### Week 3
 
-SE4 talks about the importace of working with people. The book emphasiszes that programming is not just about coding but it's also about working together.
+
+#### FB3
+
+Fuzzing book 3 talks about Fuzzing. Fuzzing is a technique used to test your code. It is doen by making a function that can randomly generate a
+ton of inputs to test your code. The point of this is to see how much your program can handle before it breaks. An example of a fuzzing function is 
+this.
+
+```python
+def fuzzer(max_length: int = 100, char_start: int = 32, char_range: int = 32) -> str:
+    """A string of up to `max_length` characters
+       in the range [`char_start`, `char_start` + `char_range`)"""
+    string_length = random.randrange(0, max_length + 1)
+    out = ""
+    for i in range(0, string_length):
+        out += chr(random.randrange(char_start, char_start + char_range))
+    return out
+```
+This program will retrun a random string with characters chosen from the specified range, and the length of the string will vary from 0 to max_length.
+
+#### Reflection and Action items
+This chapter provides a good way to test our program. I think this is especially with chasten because we will be working with xpath expressions.
+It will be important to see what our program can and can't handle
+
+#### SE3
+
+SE3 talks about the importace of working with people. The book emphasiszes that programming is not just about coding but it's also about working together.
 The book gives some examples of famous people like Bill Gates or Linus. They didn't develop all of Linux or Microsoft on their own, they might have started
 but they didn't do everything, they had a team to help them. This leads into the next topic "It's all about the team". In this part it talks about the three
 pillars of social interaction humility, respect, and trust.
 
-#### SE4 Refelction
+#### SE3 Refelction
 
-After reading SE4, it's clear that we should all be mindful of how we communicate, especially when discussing someone else's code. If we come across as too critical, it can discourage the original coder from participating and make others hesitant to share their work for fear of harsh feedback. To create a more welcoming environment, we should aim for open and constructive discussions that encourage everyone to actively engage and improve together as a team.
+After reading SE3, it's clear that we should all be mindful of how we communicate, especially when discussing someone else's code. If we come across as too critical, it can discourage the original coder from participating and make others hesitant to share their work for fear of harsh feedback. To create a more welcoming environment, we should aim for open and constructive discussions that encourage everyone to actively engage and improve together as a team.
+
+
+### Week 4
+
+
+### SE4
+
+SE4 talked about  how crucial it is to foster a culture of knowledge sharing within organizations. The article highlights  the need for psychological safety, respect, and inclusivity as the foundation of this culture. It also talks about the damaging effects of toxic behavior and encourages active efforts to combat it. The article highlights Google's leadership principles as a prime example of promoting expertise and kindness simultaneously. It also stresses the significance of using incentives and recognition systems to motivate knowledge sharing.
+
+
+
+### Reflection and Action items
+
+We need to make sure we create a safe space so people feel comfterable enough to share. We don't want to make a space where people are scared to share
+their ideas.
+
+
+
 
 
 
