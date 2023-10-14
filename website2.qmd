@@ -109,11 +109,166 @@ SE4 talked about  how crucial it is to foster a culture of knowledge sharing wit
 
 ### Reflection and Action items
 
-We need to make sure we create a safe space so people feel comfterable enough to share. We don't want to make a space where people are scared to share
-their ideas.
+We need to make sure we create a safe space so people feel comfterable enough to share. We don't want to make a space where people are scared to share their ideas.
+
+
+### FB4 Mutation
+
+Fuzzing book 4 is similar to fuzzing book 3. In FB4 it talks about another way to test your test suiets. To do this you give your code mutations, or "artifical faults". The point of this to see if the test suite can detect the incorrect inputs. An example of using mutations to test your code is this program.
+
+```python
+>>> for mutant in MuFunctionAnalyzer(gcd, log=True):
+>>>     with mutant:
+>>>         assert gcd(1, 0) == 1, "Minimal"
+>>>         assert gcd(0, 1) == 1, "Mirror"
+>>> mutant.pm.score()
+->  gcd_1
+<-  gcd_1
+Detected gcd_1 <class 'UnboundLocalError'> local variable 'c' referenced before assignment
+
+->  gcd_2
+<-  gcd_2
+Detected gcd_2 <class 'AssertionError'> Mirror
+
+->  gcd_3
+<-  gcd_3
+
+->  gcd_4
+<-  gcd_4
+
+->  gcd_5
+<-  gcd_5
+
+->  gcd_6
+<-  gcd_6
+
+->  gcd_7
+<-  gcd_7
+Detected gcd_7 <class 'AssertionError'> Minimal
+
+
+0.42857142857142855
+```
+
+```python
+
+>>> class TestGCD(unittest.TestCase):
+>>>     def test_simple(self):
+>>>         assert cfg.gcd(1, 0) == 1
+>>> 
+>>>     def test_mirror(self):
+>>>         assert cfg.gcd(0, 1) == 1
+>>> for mutant in MuProgramAnalyzer('gcd', gcd_src):
+>>>     mutant[test_module].runTest('TestGCD')
+>>> mutant.pm.score()
+======================================================================
+FAIL: test_simple (__main__.TestGCD)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py", line 3, in test_simple
+    assert cfg.gcd(1, 0) == 1
+AssertionError
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+======================================================================
+FAIL: test_simple (__main__.TestGCD)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py", line 3, in test_simple
+    assert cfg.gcd(1, 0) == 1
+AssertionError
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+======================================================================
+FAIL: test_simple (__main__.TestGCD)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py", line 3, in test_simple
+    assert cfg.gcd(1, 0) == 1
+AssertionError
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+======================================================================
+FAIL: test_simple (__main__.TestGCD)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py", line 3, in test_simple
+    assert cfg.gcd(1, 0) == 1
+AssertionError
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+======================================================================
+FAIL: test_simple (__main__.TestGCD)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py", line 3, in test_simple
+    assert cfg.gcd(1, 0) == 1
+AssertionError
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+======================================================================
+FAIL: test_simple (__main__.TestGCD)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py", line 3, in test_simple
+    assert cfg.gcd(1, 0) == 1
+AssertionError
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+======================================================================
+FAIL: test_simple (__main__.TestGCD)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py", line 3, in test_simple
+    assert cfg.gcd(1, 0) == 1
+AssertionError
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+
+1.0
+```
+
+Theses two progrmas can be used to test your test cases with mutation.
+The first program takes your function and two if it's test cases. Then it does the mutation analysis on it. The second program is used to evaluate the mutation score, that means it checks to see the number of failures with the code.
+
+
+### Reflection and Action items
+
+Testing your code is very important but only testing it one way is bad practice, making sure you account for every possiblity is important. After reading FB4 I think we should talk as a team and discuss all the posibilites that can happen when someone is using our program.
 
 
 
+## SE5
+
+### Summary
+
+The text talks about the contrast between programming and software engineering, emphasizing the responsibilities of engineers in designing products for a diverse user base. It uses Google's own failures as an example in representing underrepresented groups and points out the importance of diversity in technology companies. SE5 discusses various examples where technology failed to account for diverse users, highlighting the unintended consequences of biased data and decision-making. The text calls for the industry to prioritize equity, challenge established processes, and engage users from diverse backgrounds to build more inclusive products.
+
+
+### Reflection and Action Items
+
+SE5 serves as a reminder that, as technology becomes increasingly central to our lives, the impact of software engineering extends to all corners of society. Recognizing and addressing bias is the cornerstone of equitable engineering. Reflecting on the text, it's clear that we must be mindful of our actions when designing programs.
 
 
 
