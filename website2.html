@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -78,48 +112,288 @@ ul.task-list li input[type="checkbox"] {
 <h1>Professional Précis</h1>
 <p>Miles Franck</p>
 <p>Hi welcome to my website. I will be updating it from time to time with details of my work.</p>
-<section id="software-engineering-book-and-fuzzing-book" class="level2">
-<h2 class="anchored" data-anchor-id="software-engineering-book-and-fuzzing-book">Software Engineering Book and Fuzzing Book</h2>
-</section>
-<section id="week-one" class="level2">
-<h2 class="anchored" data-anchor-id="week-one">Week One</h2>
-<section id="summary-se1" class="level4">
-<h4 class="anchored" data-anchor-id="summary-se1">Summary SE1</h4>
-<p>Programing over time talks about how software engineering is not only about writing code but also the tools and processes that an organization uses to build and maintain code over time. It talks about three fundamental principles. Time and Change (how code needs to adapt over its life), Scale and Growth (how organizations must adapt), and Trade-offs and Costs (how decisions are made). This part also talks about Googles perspective about the growth and evolution of a sustainable software ecosystem, stemming from our scale and longevity.</p>
-</section>
-<section id="fb1" class="level4">
-<h4 class="anchored" data-anchor-id="fb1">FB1</h4>
-<p>This chapter talks the importance of testing code. Testing your code is important part of software development because it makes sure that your code is correct. In order to make sure you code works you create test cases. The point of test cases is to make sure your code does what it’s supposed to do.</p>
-</section>
-<section id="reflection" class="level4">
-<h4 class="anchored" data-anchor-id="reflection">Reflection</h4>
-<p>This content emphasizes that software engineering should look at the bigger picture. It’s not just about creating code but also about how it grows and changes over time. Google’s focus on culture, processes, and tools shows that successful software development is a team effort that needs ongoing improvement.</p>
-</section>
-<section id="reflection-fb1" class="level4">
-<h4 class="anchored" data-anchor-id="reflection-fb1">Reflection FB1</h4>
-<p>When we are making test cases we need to make sure that we account for everything. In FB1 there was a test case that would check to see if the square root of 4 is 2. The problem with this test is that it doesm’t take into account rounding errors and it doesn’t check if the correct input was entered. When making test cases we need to make sure we cover every possibilty.</p>
-</section>
-</section>
-<section id="week-two" class="level2">
-<h2 class="anchored" data-anchor-id="week-two">Week Two</h2>
-<section id="se2" class="level4">
-<h4 class="anchored" data-anchor-id="se2">SE2</h4>
-<p>This part of the book highlights the importance of scalability in software engineering, encompassing various dimensions like code sustainability, human effort, and computational resources. It underscores the significance of identifying policies that may not scale well within an organization. The book also it emphasizes the value of scalable practices, such as the “Beyoncé Rule” and knowledge sharing, for long-term software success. The concept of “shifting left” is introduced, highliting the importance of early issue detection in the software development process. The text also defines “cost” comprehensively, including both financial and non-financial factors, promoting informed decision-making. Through some examples, it illustrates the concept of trade-offs and the need for careful consideration of costs and benefits. It also distinguishes the difference between programming and software engineering,</p>
+<section id="software-engineering-book" class="level2">
+<h2 class="anchored" data-anchor-id="software-engineering-book">Software Engineering Book</h2>
+<section id="week-1" class="level3">
+<h3 class="anchored" data-anchor-id="week-1">Week 1</h3>
+<section id="summary" class="level4">
+<h4 class="anchored" data-anchor-id="summary">Summary</h4>
+<p>The book is about the concept of software engineering and its broader scope. The book talks about not just coding but also the tools and processes used to develop and maintain code over time. It raises questions about how programmers can maintain code and good coding practice to ensure that the code is able to last a long time. The key idea is that software engineering is “programming integrated over time</p>
 </section>
 <section id="reflection-and-action-items" class="level4">
 <h4 class="anchored" data-anchor-id="reflection-and-action-items">Reflection and Action Items</h4>
 <p>I feel as software engineers we need to be mindful of how we decide to code our program. We need to think about the long term, our program is going to be used and maintained by people years after us. We must ensure that what we decide to do doesn’t make life hard for the people after us. For example we should find a way to get the program to run on every OS.</p>
 </section>
+<section id="fb1" class="level4">
+<h4 class="anchored" data-anchor-id="fb1">FB1</h4>
+<p>his chapter talks about the importance of testing in software development, The purpose of testing code is to find bugs, enhance your code and to make sure your code is reliable. Even though testing your code is important, it does not mean your code will work as intended.</p>
+</section>
+<section id="reflection-and-action-items-1" class="level4">
+<h4 class="anchored" data-anchor-id="reflection-and-action-items-1">Reflection and Action Items</h4>
+<p>Learning about how to make sure our program works will be very helpful. As of now I don’t know many ways to make sure my code works. All I know is that if I get the expected output then it must be correct.</p>
+</section>
+</section>
+<section id="week-2" class="level3">
+<h3 class="anchored" data-anchor-id="week-2">Week 2</h3>
 <section id="fb2" class="level4">
 <h4 class="anchored" data-anchor-id="fb2">FB2</h4>
+<p>This chapter talks about code coverage. Code coverage is measuring which parts of a program are actually executed during a test run. This is important because test your code will guarantee that your code works and seeing what happens during a test run can help you understand your code more and allows to make improvements.The book also talked about black box and white box testing. Black box fuzzing, also known as “blind fuzzing,” is a testing technique where the tester has no knowledge of the internal structure or source code of the target software. Testers treat the software as a “black box” and focus solely on the inputs and outputs. Another way is called white box testing. White box fuzzing, also known as “smart fuzzing” or “code-aware fuzzing,” involves testing a program with an understanding of its internal structure, such as the source code, algorithms, or data structures.</p>
 </section>
-<section id="se4" class="level4">
-<h4 class="anchored" data-anchor-id="se4">SE4</h4>
-<p>SE4 talks about the importace of working with people. The book emphasiszes that programming is not just about coding but it’s also about working together. The book gives some examples of famous people like Bill Gates or Linus. They didn’t develop all of Linux or Microsoft on their own, they might have started but they didn’t do everything, they had a team to help them. This leads into the next topic “It’s all about the team”. In this part it talks about the three pillars of social interaction humility, respect, and trust.</p>
+<section id="reflection-and-action" class="level4">
+<h4 class="anchored" data-anchor-id="reflection-and-action">Reflection and Action</h4>
+<p>The book gave some libaries to use for covering code. I think that this will be a big help when we want to go over our code. I think that using these to help test our code is a good idea, but we should also try to make our own, even though that would be more work I think it would be cool if we made our own libary just for Chasten.</p>
 </section>
-<section id="se4-refelction" class="level4">
-<h4 class="anchored" data-anchor-id="se4-refelction">SE4 Refelction</h4>
-<p>After reading SE4, it’s clear that we should all be mindful of how we communicate, especially when discussing someone else’s code. If we come across as too critical, it can discourage the original coder from participating and make others hesitant to share their work for fear of harsh feedback. To create a more welcoming environment, we should aim for open and constructive discussions that encourage everyone to actively engage and improve together as a team.</p>
+<section id="se2" class="level4">
+<h4 class="anchored" data-anchor-id="se2">SE2</h4>
+<p>In SE2 it talks how software engineering is porgramming overtime. It uses Hyrum’s law as a good explination of what this means. Hyrum’s law says that as software is used by more people, they will come to rely on its existing behavior, even if that behavior was not initially intended or documented. This law talks about the importance of maintaining backward compatibility and consistency in software interfaces, as changes can inadvertently disrupt users. It also talks about how software engineering unlike solitary programming, thrives on collaborative efforts. Success in software engineering hinges on anticipating and adapting to changes, both during development and post-release. Striking a balance between resource allocation, whether time or cost, and anticipated software benefits is vital. Software engineering projects are engineered for lasting impact, designed to endure for years.</p>
+</section>
+</section>
+<section id="week-3" class="level3">
+<h3 class="anchored" data-anchor-id="week-3">Week 3</h3>
+<section id="fb3" class="level4">
+<h4 class="anchored" data-anchor-id="fb3">FB3</h4>
+<p>Fuzzing book 3 talks about Fuzzing. Fuzzing is a technique used to test your code. It is doen by making a function that can randomly generate a ton of inputs to test your code. The point of this is to see how much your program can handle before it breaks. An example of a fuzzing function is this.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fuzzer(max_length: <span class="bu">int</span> <span class="op">=</span> <span class="dv">100</span>, char_start: <span class="bu">int</span> <span class="op">=</span> <span class="dv">32</span>, char_range: <span class="bu">int</span> <span class="op">=</span> <span class="dv">32</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""A string of up to `max_length` characters</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">       in the range [`char_start`, `char_start` + `char_range`)"""</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    string_length <span class="op">=</span> random.randrange(<span class="dv">0</span>, max_length <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    out <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, string_length):</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        out <span class="op">+=</span> <span class="bu">chr</span>(random.randrange(char_start, char_start <span class="op">+</span> char_range))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> out</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This program will retrun a random string with characters chosen from the specified range, and the length of the string will vary from 0 to max_length.</p>
+</section>
+<section id="reflection-and-action-items-2" class="level4">
+<h4 class="anchored" data-anchor-id="reflection-and-action-items-2">Reflection and Action items</h4>
+<p>This chapter provides a good way to test our program. I think this is especially with chasten because we will be working with xpath expressions. It will be important to see what our program can and can’t handle</p>
+</section>
+<section id="se3" class="level4">
+<h4 class="anchored" data-anchor-id="se3">SE3</h4>
+<p>SE3 talks about the importace of working with people. The book emphasiszes that programming is not just about coding but it’s also about working together. The book gives some examples of famous people like Bill Gates or Linus. They didn’t develop all of Linux or Microsoft on their own, they might have started but they didn’t do everything, they had a team to help them. This leads into the next topic “It’s all about the team”. In this part it talks about the three pillars of social interaction humility, respect, and trust.</p>
+</section>
+<section id="se3-refelction" class="level4">
+<h4 class="anchored" data-anchor-id="se3-refelction">SE3 Refelction</h4>
+<p>After reading SE3, it’s clear that we should all be mindful of how we communicate, especially when discussing someone else’s code. If we come across as too critical, it can discourage the original coder from participating and make others hesitant to share their work for fear of harsh feedback. To create a more welcoming environment, we should aim for open and constructive discussions that encourage everyone to actively engage and improve together as a team.</p>
+</section>
+</section>
+<section id="week-4" class="level3">
+<h3 class="anchored" data-anchor-id="week-4">Week 4</h3>
+</section>
+<section id="se4" class="level3">
+<h3 class="anchored" data-anchor-id="se4">SE4</h3>
+<p>SE4 talked about how crucial it is to foster a culture of knowledge sharing within organizations. The article highlights the need for psychological safety, respect, and inclusivity as the foundation of this culture. It also talks about the damaging effects of toxic behavior and encourages active efforts to combat it. The article highlights Google’s leadership principles as a prime example of promoting expertise and kindness simultaneously. It also stresses the significance of using incentives and recognition systems to motivate knowledge sharing.</p>
+</section>
+<section id="reflection-and-action-items-3" class="level3">
+<h3 class="anchored" data-anchor-id="reflection-and-action-items-3">Reflection and Action items</h3>
+<p>We need to make sure we create a safe space so people feel comfterable enough to share. We don’t want to make a space where people are scared to share their ideas.</p>
+</section>
+<section id="fb4-mutation" class="level3">
+<h3 class="anchored" data-anchor-id="fb4-mutation">FB4 Mutation</h3>
+<p>Fuzzing book 4 is similar to fuzzing book 3. In FB4 it talks about another way to test your test suiets. To do this you give your code mutations, or “artifical faults”. The point of this to see if the test suite can detect the incorrect inputs. An example of using mutations to test your code is this program.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> mutant <span class="kw">in</span> MuFunctionAnalyzer(gcd, log<span class="op">=</span><span class="va">True</span>):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>     <span class="cf">with</span> mutant:</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>         <span class="cf">assert</span> gcd(<span class="dv">1</span>, <span class="dv">0</span>) <span class="op">==</span> <span class="dv">1</span>, <span class="st">"Minimal"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>         <span class="cf">assert</span> gcd(<span class="dv">0</span>, <span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span>, <span class="st">"Mirror"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> mutant.pm.score()</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="op">-&gt;</span>  gcd_1</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;-</span>  gcd_1</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>Detected gcd_1 <span class="op">&lt;</span><span class="kw">class</span> <span class="st">'UnboundLocalError'</span><span class="op">&gt;</span> local variable <span class="st">'c'</span> referenced before assignment</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="op">-&gt;</span>  gcd_2</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;-</span>  gcd_2</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>Detected gcd_2 <span class="op">&lt;</span><span class="kw">class</span> <span class="st">'AssertionError'</span><span class="op">&gt;</span> Mirror</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="op">-&gt;</span>  gcd_3</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;-</span>  gcd_3</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="op">-&gt;</span>  gcd_4</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;-</span>  gcd_4</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="op">-&gt;</span>  gcd_5</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;-</span>  gcd_5</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="op">-&gt;</span>  gcd_6</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;-</span>  gcd_6</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="op">-&gt;</span>  gcd_7</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;-</span>  gcd_7</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>Detected gcd_7 <span class="op">&lt;</span><span class="kw">class</span> <span class="st">'AssertionError'</span><span class="op">&gt;</span> Minimal</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="fl">0.42857142857142855</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">class</span> TestGCD(unittest.TestCase):</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>     <span class="kw">def</span> test_simple(<span class="va">self</span>):</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>         <span class="cf">assert</span> cfg.gcd(<span class="dv">1</span>, <span class="dv">0</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>     <span class="kw">def</span> test_mirror(<span class="va">self</span>):</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>         <span class="cf">assert</span> cfg.gcd(<span class="dv">0</span>, <span class="dv">1</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> mutant <span class="kw">in</span> MuProgramAnalyzer(<span class="st">'gcd'</span>, gcd_src):</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>     mutant[test_module].runTest(<span class="st">'TestGCD'</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> mutant.pm.score()</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="op">======================================================================</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>FAIL: test_simple (__main__.TestGCD)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="op">----------------------------------------------------------------------</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>Traceback (most recent call last):</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py"</span>, line <span class="dv">3</span>, <span class="kw">in</span> test_simple</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> cfg.gcd(<span class="dv">1</span>, <span class="dv">0</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="pp">AssertionError</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="op">----------------------------------------------------------------------</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>Ran <span class="dv">1</span> test <span class="kw">in</span> <span class="fl">0.000</span><span class="er">s</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>FAILED (failures<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="op">======================================================================</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>FAIL: test_simple (__main__.TestGCD)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="op">----------------------------------------------------------------------</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>Traceback (most recent call last):</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py"</span>, line <span class="dv">3</span>, <span class="kw">in</span> test_simple</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> cfg.gcd(<span class="dv">1</span>, <span class="dv">0</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="pp">AssertionError</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="op">----------------------------------------------------------------------</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>Ran <span class="dv">1</span> test <span class="kw">in</span> <span class="fl">0.000</span><span class="er">s</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>FAILED (failures<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="op">======================================================================</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>FAIL: test_simple (__main__.TestGCD)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="op">----------------------------------------------------------------------</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>Traceback (most recent call last):</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py"</span>, line <span class="dv">3</span>, <span class="kw">in</span> test_simple</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> cfg.gcd(<span class="dv">1</span>, <span class="dv">0</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="pp">AssertionError</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="op">----------------------------------------------------------------------</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>Ran <span class="dv">1</span> test <span class="kw">in</span> <span class="fl">0.000</span><span class="er">s</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>FAILED (failures<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="op">======================================================================</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>FAIL: test_simple (__main__.TestGCD)</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="op">----------------------------------------------------------------------</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>Traceback (most recent call last):</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py"</span>, line <span class="dv">3</span>, <span class="kw">in</span> test_simple</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> cfg.gcd(<span class="dv">1</span>, <span class="dv">0</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="pp">AssertionError</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="op">----------------------------------------------------------------------</span></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>Ran <span class="dv">1</span> test <span class="kw">in</span> <span class="fl">0.000</span><span class="er">s</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>FAILED (failures<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="op">======================================================================</span></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>FAIL: test_simple (__main__.TestGCD)</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="op">----------------------------------------------------------------------</span></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>Traceback (most recent call last):</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py"</span>, line <span class="dv">3</span>, <span class="kw">in</span> test_simple</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> cfg.gcd(<span class="dv">1</span>, <span class="dv">0</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a><span class="pp">AssertionError</span></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a><span class="op">----------------------------------------------------------------------</span></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>Ran <span class="dv">1</span> test <span class="kw">in</span> <span class="fl">0.000</span><span class="er">s</span></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>FAILED (failures<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a><span class="op">======================================================================</span></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>FAIL: test_simple (__main__.TestGCD)</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a><span class="op">----------------------------------------------------------------------</span></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>Traceback (most recent call last):</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py"</span>, line <span class="dv">3</span>, <span class="kw">in</span> test_simple</span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> cfg.gcd(<span class="dv">1</span>, <span class="dv">0</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a><span class="pp">AssertionError</span></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a><span class="op">----------------------------------------------------------------------</span></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>Ran <span class="dv">1</span> test <span class="kw">in</span> <span class="fl">0.000</span><span class="er">s</span></span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>FAILED (failures<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a><span class="op">======================================================================</span></span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>FAIL: test_simple (__main__.TestGCD)</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a><span class="op">----------------------------------------------------------------------</span></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>Traceback (most recent call last):</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>  File <span class="st">"/var/folders/n2/xd9445p97rb3xh7m1dfx8_4h0006ts/T/ipykernel_78662/2565918356.py"</span>, line <span class="dv">3</span>, <span class="kw">in</span> test_simple</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> cfg.gcd(<span class="dv">1</span>, <span class="dv">0</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a><span class="pp">AssertionError</span></span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a><span class="op">----------------------------------------------------------------------</span></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>Ran <span class="dv">1</span> test <span class="kw">in</span> <span class="fl">0.000</span><span class="er">s</span></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>FAILED (failures<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a><span class="fl">1.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Theses two progrmas can be used to test your test cases with mutation. The first program takes your function and two if it’s test cases. Then it does the mutation analysis on it. The second program is used to evaluate the mutation score, that means it checks to see the number of failures with the code.</p>
+</section>
+<section id="reflection-and-action-items-4" class="level3">
+<h3 class="anchored" data-anchor-id="reflection-and-action-items-4">Reflection and Action items</h3>
+<p>Testing your code is very important but only testing it one way is bad practice, making sure you account for every possiblity is important. After reading FB4 I think we should talk as a team and discuss all the posibilites that can happen when someone is using our program.</p>
+</section>
+</section>
+<section id="week-5" class="level2">
+<h2 class="anchored" data-anchor-id="week-5">Week 5</h2>
+</section>
+<section id="fb5" class="level2">
+<h2 class="anchored" data-anchor-id="fb5">FB5</h2>
+<p>MutationFuzzer class that takes a list of seed inputs which are then mutated FB5 is about mutation fuzzing. To make simple mutation fuzzing issimilar to normal fuzzing you’re inserting a random character, deleting a character, or flipping a bit in a character representation but this time instead of just using random inputs with very little chance of being correct, you make some changes to the inputs so it can be valid. An example of this is</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> delete_random_character(s: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Returns s with a random character deleted"""</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> s <span class="op">==</span> <span class="st">""</span>:</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> s</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    pos <span class="op">=</span> random.randint(<span class="dv">0</span>, <span class="bu">len</span>(s) <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># print("Deleting", repr(s[pos]), "at", pos)</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> s[:pos] <span class="op">+</span> s[pos <span class="op">+</span> <span class="dv">1</span>:]</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    seed_input <span class="op">=</span> <span class="st">"A quick brown fox"</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> delete_random_character(seed_input)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="bu">repr</span>(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The output of this code is ‘A uick brown fox’ ‘A quic brown fox’ ‘A quick brown fo’ ‘A quic brown fox’ ‘A quick bown fox’ ‘A quick bown fox’ ‘A quick brown fx’ ‘A quick brown ox’ ‘A quick brow fox’ ‘A quic brown fox’</p>
+<p>As you can see the results are close but they are not correct.</p>
+<section id="reflection-and-action-items-5" class="level3">
+<h3 class="anchored" data-anchor-id="reflection-and-action-items-5">Reflection and Action items</h3>
+<p>Testing inputs that are can be considerd valid but not correct is important becuase we can make test cases for inputs that will likely never happen, but testing for inputs that can produce a output but produce the wrong output is very important. We should use the examples in this chapter to help us make test cases.</p>
+</section>
+</section>
+<section id="se5" class="level2">
+<h2 class="anchored" data-anchor-id="se5">SE5</h2>
+<section id="summary-1" class="level3">
+<h3 class="anchored" data-anchor-id="summary-1">Summary</h3>
+<p>The text talks about the contrast between programming and software engineering, emphasizing the responsibilities of engineers in designing products for a diverse user base. It uses Google’s own failures as an example in representing underrepresented groups and points out the importance of diversity in technology companies. SE5 discusses various examples where technology failed to account for diverse users, highlighting the unintended consequences of biased data and decision-making. The text calls for the industry to prioritize equity, challenge established processes, and engage users from diverse backgrounds to build more inclusive products.</p>
+</section>
+<section id="reflection-and-action-items-6" class="level3">
+<h3 class="anchored" data-anchor-id="reflection-and-action-items-6">Reflection and Action Items</h3>
+<p>SE5 serves as a reminder that, as technology becomes increasingly central to our lives, the impact of software engineering extends to all corners of society. Recognizing and addressing bias is the cornerstone of equitable engineering. Reflecting on the text, it’s clear that we must be mindful of our actions when designing programs.</p>
+</section>
+</section>
+<section id="week-6" class="level2">
+<h2 class="anchored" data-anchor-id="week-6">Week 6</h2>
+</section>
+<section id="fb6" class="level2">
+<h2 class="anchored" data-anchor-id="fb6">FB6</h2>
+<p>FB6 is about fuzzing with grammars. To summarize FB6 grammars are extra hints you can give to your fuzzing samples. By giving your inputs more correct information you will have a higher chance of generating usalbe inputs to your program.</p>
+<p>This is an example of grammars</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> US_PHONE_GRAMMAR: Grammar <span class="op">=</span> {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>     <span class="st">"&lt;start&gt;"</span>: [<span class="st">"&lt;phone-number&gt;"</span>],</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>     <span class="st">"&lt;phone-number&gt;"</span>: [<span class="st">"(&lt;area&gt;)&lt;exchange&gt;-&lt;line&gt;"</span>],</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>     <span class="st">"&lt;area&gt;"</span>: [<span class="st">"&lt;lead-digit&gt;&lt;digit&gt;&lt;digit&gt;"</span>],</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>     <span class="st">"&lt;exchange&gt;"</span>: [<span class="st">"&lt;lead-digit&gt;&lt;digit&gt;&lt;digit&gt;"</span>],</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>     <span class="st">"&lt;line&gt;"</span>: [<span class="st">"&lt;digit&gt;&lt;digit&gt;&lt;digit&gt;&lt;digit&gt;"</span>],</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>     <span class="st">"&lt;lead-digit&gt;"</span>: [<span class="st">"2"</span>, <span class="st">"3"</span>, <span class="st">"4"</span>, <span class="st">"5"</span>, <span class="st">"6"</span>, <span class="st">"7"</span>, <span class="st">"8"</span>, <span class="st">"9"</span>],</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>     <span class="st">"&lt;digit&gt;"</span>: [<span class="st">"0"</span>, <span class="st">"1"</span>, <span class="st">"2"</span>, <span class="st">"3"</span>, <span class="st">"4"</span>, <span class="st">"5"</span>, <span class="st">"6"</span>, <span class="st">"7"</span>, <span class="st">"8"</span>, <span class="st">"9"</span>]</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> }</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">assert</span> is_valid_grammar(US_PHONE_GRAMMAR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here you can see that we have give the program so valid inputs to use when fuzzing. Now that we can get it to generate valid inputs it can be more helpful with testing our program.</p>
+</section>
+<section id="reflection-and-action-items-7" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-and-action-items-7">Reflection and Action Items</h2>
+<p>Using grammars like the US_PHONE_GRAMMAR example in our program can help us thoroughly test our software with various valid inputs. This approach ensures that our software handles expected inputs correctly and guards against unexpected variations in input formats.</p>
+</section>
+<section id="se6" class="level2">
+<h2 class="anchored" data-anchor-id="se6">SE6</h2>
+<section id="summary-2" class="level3">
+<h3 class="anchored" data-anchor-id="summary-2">Summary</h3>
+<p>SE6 emphasizes the importance of effective leadership and management, offering valuable insights for leaders. It highlights the significance of setting clear goals, honest communication, and tracking team happiness. It also talks about strategies for motivating and providing direction to team members, it makes a connection between team members and plants, where each has unique needs. The conclusion underscores the role of humility, trust, and respect as essential pillars of good leadership.</p>
+</section>
+<section id="action-items-and-reflection" class="level3">
+<h3 class="anchored" data-anchor-id="action-items-and-reflection">Action Items and Reflection</h3>
+<p>Effective leadership means leading, not just managing. Delegate, communicate clearly, and provide honest feedback. Ensure fair work distribution, promote skill development, and consider work-life balance. Use intrinsic motivation principles: give autonomy, skill opportunities, and a sense of purpose. Tailor your approach to individual team members, like caring for different plants. Prioritize honesty and trust-building. Leadership requires technical and social skills, including humility and respect.</p>
 </section>
 </section>
 </section>

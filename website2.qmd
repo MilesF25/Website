@@ -257,7 +257,46 @@ The first program takes your function and two if it's test cases. Then it does t
 
 Testing your code is very important but only testing it one way is bad practice, making sure you account for every possiblity is important. After reading FB4 I think we should talk as a team and discuss all the posibilites that can happen when someone is using our program.
 
+## Week 5
 
+
+## FB5
+
+MutationFuzzer class that takes a list of seed inputs which are then mutated
+FB5 is about mutation fuzzing. To make simple mutation fuzzing issimilar to normal fuzzing you're inserting a random character, deleting a character, or flipping a bit in a character representation but this time instead of just using random inputs with very little chance of being correct, you make some changes to the inputs so it can be valid. An example of this is 
+
+```python
+def delete_random_character(s: str) -> str:
+    """Returns s with a random character deleted"""
+    if s == "":
+        return s
+
+    pos = random.randint(0, len(s) - 1)
+    # print("Deleting", repr(s[pos]), "at", pos)
+    return s[:pos] + s[pos + 1:]
+
+    seed_input = "A quick brown fox"
+    for i in range(10):
+        x = delete_random_character(seed_input)
+        print(repr(x))
+```
+The output of this code is
+'A uick brown fox'
+'A quic brown fox'
+'A quick brown fo'
+'A quic brown fox'
+'A quick bown fox'
+'A quick bown fox'
+'A quick brown fx'
+'A quick brown ox'
+'A quick brow fox'
+'A quic brown fox'
+
+As you can see the results are close but they are not correct.
+
+### Reflection and Action items
+
+Testing inputs that are can be considerd valid but not correct is important becuase we can make test cases for inputs that will likely never happen, but testing for inputs that can produce a output but produce the wrong output is very important. We should use the examples in this chapter to help us make test cases.
 
 ## SE5
 
@@ -269,6 +308,55 @@ The text talks about the contrast between programming and software engineering, 
 ### Reflection and Action Items
 
 SE5 serves as a reminder that, as technology becomes increasingly central to our lives, the impact of software engineering extends to all corners of society. Recognizing and addressing bias is the cornerstone of equitable engineering. Reflecting on the text, it's clear that we must be mindful of our actions when designing programs.
+
+
+## Week 6
+
+## FB6
+
+FB6 is about fuzzing with grammars. To summarize FB6 grammars are extra hints you can give to your fuzzing samples. By giving your inputs more correct information you will have a higher chance of generating usalbe inputs to your program.
+
+This is an example of grammars
+
+```python
+>>> US_PHONE_GRAMMAR: Grammar = {
+>>>     "<start>": ["<phone-number>"],
+>>>     "<phone-number>": ["(<area>)<exchange>-<line>"],
+>>>     "<area>": ["<lead-digit><digit><digit>"],
+>>>     "<exchange>": ["<lead-digit><digit><digit>"],
+>>>     "<line>": ["<digit><digit><digit><digit>"],
+>>>     "<lead-digit>": ["2", "3", "4", "5", "6", "7", "8", "9"],
+>>>     "<digit>": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+>>> }
+>>> 
+>>> assert is_valid_grammar(US_PHONE_GRAMMAR)
+```
+Here you can see that we have give the program so valid inputs to use when fuzzing. Now that we can get it to generate valid inputs it can be more helpful with testing our program. 
+
+## Reflection and Action Items
+
+Using grammars like the US_PHONE_GRAMMAR example in our program can help us thoroughly test our software with various valid inputs. This approach ensures that our software handles expected inputs correctly and guards against unexpected variations in input formats.
+
+
+
+
+## SE6
+
+### Summary
+
+
+SE6 emphasizes the importance of effective leadership and management, offering valuable insights for leaders. It highlights the significance of setting clear goals, honest communication, and tracking team happiness. It also talks about strategies for motivating and providing direction to team members, it makes a connection between team members and plants, where each has unique needs. The conclusion underscores the role of humility, trust, and respect as essential pillars of good leadership.
+
+
+
+
+### Action Items and Reflection
+
+Effective leadership means leading, not just managing. Delegate, communicate clearly, and provide honest feedback. Ensure fair work distribution, promote skill development, and consider work-life balance. Use intrinsic motivation principles: give autonomy, skill opportunities, and a sense of purpose. Tailor your approach to individual team members, like caring for different plants. Prioritize honesty and trust-building. Leadership requires technical and social skills, including humility and respect.
+
+
+
+
 
 
 
