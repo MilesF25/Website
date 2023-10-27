@@ -14,7 +14,7 @@ Hi welcome to my website. I will be updating it from time to time with details o
 
 ## Software Engineering Book
 
-### Week 1
+### Week 3
 
 #### Summary
 
@@ -38,7 +38,7 @@ if I get the expected output then it must be correct.
 
 
 
-### Week 2
+### Week 4
 
 
 #### FB2
@@ -61,7 +61,7 @@ as software is used by more people, they will come to rely on its existing behav
 It also talks about how software engineering unlike solitary programming, thrives on collaborative efforts. Success in software engineering hinges on anticipating and adapting to changes, both during development and post-release. Striking a balance between resource allocation, whether time or cost, and anticipated software benefits is vital. Software engineering projects are engineered for lasting impact, designed to endure for years.
 
 
-### Week 3
+### Week 5
 
 
 #### FB3
@@ -98,7 +98,7 @@ pillars of social interaction humility, respect, and trust.
 After reading SE3, it's clear that we should all be mindful of how we communicate, especially when discussing someone else's code. If we come across as too critical, it can discourage the original coder from participating and make others hesitant to share their work for fear of harsh feedback. To create a more welcoming environment, we should aim for open and constructive discussions that encourage everyone to actively engage and improve together as a team.
 
 
-### Week 4
+### Week 6
 
 
 ### SE4
@@ -257,7 +257,7 @@ The first program takes your function and two if it's test cases. Then it does t
 
 Testing your code is very important but only testing it one way is bad practice, making sure you account for every possiblity is important. After reading FB4 I think we should talk as a team and discuss all the posibilites that can happen when someone is using our program.
 
-## Week 5
+## Week 7
 
 
 ## FB5
@@ -310,7 +310,7 @@ The text talks about the contrast between programming and software engineering, 
 SE5 serves as a reminder that, as technology becomes increasingly central to our lives, the impact of software engineering extends to all corners of society. Recognizing and addressing bias is the cornerstone of equitable engineering. Reflecting on the text, it's clear that we must be mindful of our actions when designing programs.
 
 
-## Week 6
+## Week 8
 
 ## FB6
 
@@ -355,7 +355,19 @@ SE6 emphasizes the importance of effective leadership and management, offering v
 Effective leadership means leading, not just managing. Delegate, communicate clearly, and provide honest feedback. Ensure fair work distribution, promote skill development, and consider work-life balance. Use intrinsic motivation principles: give autonomy, skill opportunities, and a sense of purpose. Tailor your approach to individual team members, like caring for different plants. Prioritize honesty and trust-building. Leadership requires technical and social skills, including humility and respect.
 
 
+## Week 9
 
+
+### FB7
+
+An efficent fuzzing grammar is a more efficent way to fuzz compared to normal fuzzing. Normal fuzzing is just generating a bunch of possibly correct
+inputs and seeing if it works or not. A efficient grammar fuzzur makes use of derivation trees. Derivation trees is an interesting solution for the problem with regular fuzzing. By using a derivation tree, it allows us to not only generate inputs systematically but also gain more control over the testing process. We can always keep track of our expansion status, understand which elements have been expanded into which others, and identify which symbols still need to be expanded. Also the use of derivation trees offers the benefit of memory and time efficiency. Rather than repeatedly generating new inputs, we add new elements to the tree, which is a more efficient approach. This controlled and efficient method of input generation leads to more effective testing and a higher likelihood of discovering vulnerabilities and bugs in software.
+
+### Reflection and Action Items
+
+I think that it goes without saying having a more efficient way to fuzz our code is a good thing. It is a good idea to have a way to give our program
+decent inputs to test instead of throwing random inputs at it. That being said I don't think chasten needs this kind of testing. I feel like our program
+isn't so complex that it needs something like this to test it. I think that this could be an interesting conversation to have with the team.
 
 
 
