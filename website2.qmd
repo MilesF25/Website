@@ -262,8 +262,8 @@ Testing your code is very important but only testing it one way is bad practice,
 
 ## FB5
 
-MutationFuzzer class that takes a list of seed inputs which are then mutated
-FB5 is about mutation fuzzing. To make simple mutation fuzzing issimilar to normal fuzzing you're inserting a random character, deleting a character, or flipping a bit in a character representation but this time instead of just using random inputs with very little chance of being correct, you make some changes to the inputs so it can be valid. An example of this is 
+MutationFuzzer class that takes a list of seed inputs which are then mutated.
+FB5 is about mutation fuzzing. To make it simple, mutation fuzzing is similar to normal fuzzing, you're inserting a random character, deleting a character, or flipping a bit in a character representation but this time instead of just using random inputs with very little chance of being correct, you make some changes to the inputs so it can be valid. An example of this is 
 
 ```python
 def delete_random_character(s: str) -> str:
