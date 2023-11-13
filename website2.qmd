@@ -370,6 +370,23 @@ decent inputs to test instead of throwing random inputs at it. That being said I
 isn't so complex that it needs something like this to test it. I think that this could be an interesting conversation to have with the team.
 
 
+## SE7
+
+SE7 talks about effective leadership strategies focusing on time and energy management for leaders facing overwhelming responsibilities. It emphasizes three core principles, Always Be Deciding, where leaders navigate ambiguous problems by making informed trade-offs; Always Be Leaving, encouraging the development of self-sufficient teams that can handle challenges independently; and Always Be Scaling, advising proactive management of increasing responsibilities to protect personal resources. The talks about the importance of deliberately dropping lower-priority tasks, allowing leaders to focus on critical responsibilities. It also highlights the significance of protecting workers energy through strategic disconnection, breaks, and rejuvenating vacations.
 
 
 
+## Reflection and action items
+After reading this, I believe it's we should concentrate on the essential aspects of the chasten. With the semester coming to a close, it might be necessary to make a trade-off, sacrificing some quality-of-life features in favor of prioritizing the most critical tasks. This shift in focus will ensure we give our full attention to what matters
+
+
+## SE8
+
+
+## Reflection
+
+The text talks about the importance of rules and guidance in software development at a large company like Google. Rules are vital for maintaining a scalable codebase, while guidance offers distilled best practices from experience. It emphasizes the need for educational resources to help engineers understand how programming languages are used within Google's codebase. Automated tools, such as error checkers and code formatters, are encouraged to enforce rules and ensure consistency. The implementation of tools like gofmt for Go streamlined formatting and readability. Essentially, rules, coupled with guidance, educational support, and automated enforcement, form the key components for managing complexity and sustaining a healthy codebase in a large engineering organization.
+
+## Reflection and Action items
+
+After reading this I thought back to the first few weeks of this class, to me if felt as if there was no guidance and we had to figure everything out on our own, but as the weeks went by we started to find our footing. What I found really interesting is the  use of tools like error checkers and formatters to ensure consistent rule adherence. How could we implent that into our work.
