@@ -114,8 +114,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Hi welcome to my website. I will be updating it from time to time with details of my work.</p>
 <section id="software-engineering-book" class="level2">
 <h2 class="anchored" data-anchor-id="software-engineering-book">Software Engineering Book</h2>
-<section id="week-1" class="level3">
-<h3 class="anchored" data-anchor-id="week-1">Week 1</h3>
+<section id="week-3" class="level3">
+<h3 class="anchored" data-anchor-id="week-3">Week 3</h3>
 <section id="summary" class="level4">
 <h4 class="anchored" data-anchor-id="summary">Summary</h4>
 <p>The book is about the concept of software engineering and its broader scope. The book talks about not just coding but also the tools and processes used to develop and maintain code over time. It raises questions about how programmers can maintain code and good coding practice to ensure that the code is able to last a long time. The key idea is that software engineering is “programming integrated over time</p>
@@ -133,8 +133,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Learning about how to make sure our program works will be very helpful. As of now I don’t know many ways to make sure my code works. All I know is that if I get the expected output then it must be correct.</p>
 </section>
 </section>
-<section id="week-2" class="level3">
-<h3 class="anchored" data-anchor-id="week-2">Week 2</h3>
+<section id="week-4" class="level3">
+<h3 class="anchored" data-anchor-id="week-4">Week 4</h3>
 <section id="fb2" class="level4">
 <h4 class="anchored" data-anchor-id="fb2">FB2</h4>
 <p>This chapter talks about code coverage. Code coverage is measuring which parts of a program are actually executed during a test run. This is important because test your code will guarantee that your code works and seeing what happens during a test run can help you understand your code more and allows to make improvements.The book also talked about black box and white box testing. Black box fuzzing, also known as “blind fuzzing,” is a testing technique where the tester has no knowledge of the internal structure or source code of the target software. Testers treat the software as a “black box” and focus solely on the inputs and outputs. Another way is called white box testing. White box fuzzing, also known as “smart fuzzing” or “code-aware fuzzing,” involves testing a program with an understanding of its internal structure, such as the source code, algorithms, or data structures.</p>
@@ -148,8 +148,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In SE2 it talks how software engineering is porgramming overtime. It uses Hyrum’s law as a good explination of what this means. Hyrum’s law says that as software is used by more people, they will come to rely on its existing behavior, even if that behavior was not initially intended or documented. This law talks about the importance of maintaining backward compatibility and consistency in software interfaces, as changes can inadvertently disrupt users. It also talks about how software engineering unlike solitary programming, thrives on collaborative efforts. Success in software engineering hinges on anticipating and adapting to changes, both during development and post-release. Striking a balance between resource allocation, whether time or cost, and anticipated software benefits is vital. Software engineering projects are engineered for lasting impact, designed to endure for years.</p>
 </section>
 </section>
-<section id="week-3" class="level3">
-<h3 class="anchored" data-anchor-id="week-3">Week 3</h3>
+<section id="week-5" class="level3">
+<h3 class="anchored" data-anchor-id="week-5">Week 5</h3>
 <section id="fb3" class="level4">
 <h4 class="anchored" data-anchor-id="fb3">FB3</h4>
 <p>Fuzzing book 3 talks about Fuzzing. Fuzzing is a technique used to test your code. It is doen by making a function that can randomly generate a ton of inputs to test your code. The point of this is to see how much your program can handle before it breaks. An example of a fuzzing function is this.</p>
@@ -176,8 +176,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>After reading SE3, it’s clear that we should all be mindful of how we communicate, especially when discussing someone else’s code. If we come across as too critical, it can discourage the original coder from participating and make others hesitant to share their work for fear of harsh feedback. To create a more welcoming environment, we should aim for open and constructive discussions that encourage everyone to actively engage and improve together as a team.</p>
 </section>
 </section>
-<section id="week-4" class="level3">
-<h3 class="anchored" data-anchor-id="week-4">Week 4</h3>
+<section id="week-6" class="level3">
+<h3 class="anchored" data-anchor-id="week-6">Week 6</h3>
 </section>
 <section id="se4" class="level3">
 <h3 class="anchored" data-anchor-id="se4">SE4</h3>
@@ -324,12 +324,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Testing your code is very important but only testing it one way is bad practice, making sure you account for every possiblity is important. After reading FB4 I think we should talk as a team and discuss all the posibilites that can happen when someone is using our program.</p>
 </section>
 </section>
-<section id="week-5" class="level2">
-<h2 class="anchored" data-anchor-id="week-5">Week 5</h2>
+<section id="week-7" class="level2">
+<h2 class="anchored" data-anchor-id="week-7">Week 7</h2>
 </section>
 <section id="fb5" class="level2">
 <h2 class="anchored" data-anchor-id="fb5">FB5</h2>
-<p>MutationFuzzer class that takes a list of seed inputs which are then mutated FB5 is about mutation fuzzing. To make simple mutation fuzzing issimilar to normal fuzzing you’re inserting a random character, deleting a character, or flipping a bit in a character representation but this time instead of just using random inputs with very little chance of being correct, you make some changes to the inputs so it can be valid. An example of this is</p>
+<p>MutationFuzzer class that takes a list of seed inputs which are then mutated. FB5 is about mutation fuzzing. To make it simple, mutation fuzzing is similar to normal fuzzing, you’re inserting a random character, deleting a character, or flipping a bit in a character representation but this time instead of just using random inputs with very little chance of being correct, you make some changes to the inputs so it can be valid. An example of this is</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> delete_random_character(s: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Returns s with a random character deleted"""</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> s <span class="op">==</span> <span class="st">""</span>:</span>
@@ -361,8 +361,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>SE5 serves as a reminder that, as technology becomes increasingly central to our lives, the impact of software engineering extends to all corners of society. Recognizing and addressing bias is the cornerstone of equitable engineering. Reflecting on the text, it’s clear that we must be mindful of our actions when designing programs.</p>
 </section>
 </section>
-<section id="week-6" class="level2">
-<h2 class="anchored" data-anchor-id="week-6">Week 6</h2>
+<section id="week-8" class="level2">
+<h2 class="anchored" data-anchor-id="week-8">Week 8</h2>
 </section>
 <section id="fb6" class="level2">
 <h2 class="anchored" data-anchor-id="fb6">FB6</h2>
@@ -395,6 +395,71 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="action-items-and-reflection">Action Items and Reflection</h3>
 <p>Effective leadership means leading, not just managing. Delegate, communicate clearly, and provide honest feedback. Ensure fair work distribution, promote skill development, and consider work-life balance. Use intrinsic motivation principles: give autonomy, skill opportunities, and a sense of purpose. Tailor your approach to individual team members, like caring for different plants. Prioritize honesty and trust-building. Leadership requires technical and social skills, including humility and respect.</p>
 </section>
+</section>
+<section id="week-9" class="level2">
+<h2 class="anchored" data-anchor-id="week-9">Week 9</h2>
+<section id="fb7" class="level3">
+<h3 class="anchored" data-anchor-id="fb7">FB7</h3>
+<p>An efficent fuzzing grammar is a more efficent way to fuzz compared to normal fuzzing. Normal fuzzing is just generating a bunch of possibly correct inputs and seeing if it works or not. A efficient grammar fuzzur makes use of derivation trees. Derivation trees is an interesting solution for the problem with regular fuzzing. By using a derivation tree, it allows us to not only generate inputs systematically but also gain more control over the testing process. We can always keep track of our expansion status, understand which elements have been expanded into which others, and identify which symbols still need to be expanded. Also the use of derivation trees offers the benefit of memory and time efficiency. Rather than repeatedly generating new inputs, we add new elements to the tree, which is a more efficient approach. This controlled and efficient method of input generation leads to more effective testing and a higher likelihood of discovering vulnerabilities and bugs in software.</p>
+</section>
+<section id="reflection-and-action-items-8" class="level3">
+<h3 class="anchored" data-anchor-id="reflection-and-action-items-8">Reflection and Action Items</h3>
+<p>I think that it goes without saying having a more efficient way to fuzz our code is a good thing. It is a good idea to have a way to give our program decent inputs to test instead of throwing random inputs at it. That being said I don’t think chasten needs this kind of testing. I feel like our program isn’t so complex that it needs something like this to test it. I think that this could be an interesting conversation to have with the team.</p>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+</section>
+</section>
+<section id="se7" class="level2">
+<h2 class="anchored" data-anchor-id="se7">SE7</h2>
+<p>SE7 talks about effective leadership strategies focusing on time and energy management for leaders facing overwhelming responsibilities. It emphasizes three core principles, Always Be Deciding, where leaders navigate ambiguous problems by making informed trade-offs; Always Be Leaving, encouraging the development of self-sufficient teams that can handle challenges independently; and Always Be Scaling, advising proactive management of increasing responsibilities to protect personal resources. The talks about the importance of deliberately dropping lower-priority tasks, allowing leaders to focus on critical responsibilities. It also highlights the significance of protecting workers energy through strategic disconnection, breaks, and rejuvenating vacations.</p>
+</section>
+<section id="reflection-and-action-items-9" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-and-action-items-9">Reflection and action items</h2>
+<p>After reading this, I believe it’s we should concentrate on the essential aspects of the chasten. With the semester coming to a close, it might be necessary to make a trade-off, sacrificing some quality-of-life features in favor of prioritizing the most critical tasks. This shift in focus will ensure we give our full attention to what matters</p>
+<section id="week-10" class="level3">
+<h3 class="anchored" data-anchor-id="week-10">Week 10</h3>
+</section>
+</section>
+<section id="fb8" class="level2">
+<h2 class="anchored" data-anchor-id="fb8">FB8</h2>
+<p>FB8 talks about how to parse inputs so you can achieve even better inputs. The book showd how effective parsing the inputs can be. In the book it refrenced a CSV file with information on cars and a function that can retrive the data from the CSV, then it gave the function data using a grammar fuzzer, this was the result</p>
+<pre><code>'9w9J\'/,LU&lt;"l,|,Y,Zv)Amvx,c\n'  Invalid entry
+'(n8].H7,qolS'   not enough values to unpack (expected at least 4, got 2)
+'\nQoLWQ,jSa'    not enough values to unpack (expected at least 4, got 2)
+'K1,\n,RE,fq,%,,sT+aAb'  Invalid entry
+"m,d,,8j4'),-yQ,B7"  Invalid entry
+'g4,s1\t[}{.,M,&lt;,\nzd,.am'   Invalid entry
+',Z[,z,c,#x1,gc.F'   Invalid entry
+'pWs,rT`,R'  not enough values to unpack (expected at least 4, got 3)
+'iN,br%,Q,R'     Invalid entry
+'ol,\nH&lt;\tn,^#,=A'   Invalid entry</code></pre>
+<p>Even though the grammar has hints on what the proper inputs are it still could not generate proper inputs. With input parsing we would be able to generate even more accurate inputs.</p>
+</section>
+<section id="se8" class="level2">
+<h2 class="anchored" data-anchor-id="se8">SE8</h2>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<p>The text talks about the importance of rules and guidance in software development at a large company like Google. Rules are vital for maintaining a scalable codebase, while guidance offers distilled best practices from experience. It emphasizes the need for educational resources to help engineers understand how programming languages are used within Google’s codebase. Automated tools, such as error checkers and code formatters, are encouraged to enforce rules and ensure consistency. The implementation of tools like gofmt for Go streamlined formatting and readability. Essentially, rules, coupled with guidance, educational support, and automated enforcement, form the key components for managing complexity and sustaining a healthy codebase in a large engineering organization.</p>
+</section>
+<section id="reflection-and-action-items-10" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-and-action-items-10">Reflection and Action items</h2>
+<p>After reading this I thought back to the first few weeks of this class, to me if felt as if there was no guidance and we had to figure everything out on our own, but as the weeks went by we started to find our footing. What I found really interesting is the use of tools like error checkers and formatters to ensure consistent rule adherence. How could we implent that into our work.</p>
+<section id="week-11" class="level3">
+<h3 class="anchored" data-anchor-id="week-11">Week 11</h3>
+</section>
+</section>
+<section id="se9" class="level2">
+<h2 class="anchored" data-anchor-id="se9">SE9</h2>
+</section>
+<section id="summary-3" class="level2">
+<h2 class="anchored" data-anchor-id="summary-3">Summary</h2>
+<p>The article talks about the importance of code review at Google, emphasizing its role in maintaining code quality and consistency. It stresses the need for readable and simple code for easier understa,nding and long-term maintenance. Some benefits of code review, is that it promotes a collaborative mindset professionalism , and constructive feedback. Knowledge sharing is also a key aspect, and best practices like keeping changes small are recommended. The article categorizes different types of code reviews and underscores the overall importance of code review in ensuring developer satisfaction and efficient development.</p>
+</section>
+<section id="reflection-and-action-items-11" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-and-action-items-11">Reflection and action items</h2>
+<p>The article talks about the vital role of code review at Google. It highlights the need for professionalism, knowledge sharing, and the psychological benefits of constructive feedback. The action items suggest focusing on respectful communication, using reviews for learning, and embracing automation for efficiency. Keeping code changes small is recommended for a smoother process. We should try to consider these things when reviewing code.</p>
 </section>
 </section>
 

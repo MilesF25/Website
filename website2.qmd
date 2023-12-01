@@ -369,6 +369,8 @@ I think that it goes without saying having a more efficient way to fuzz our code
 decent inputs to test instead of throwing random inputs at it. That being said I don't think chasten needs this kind of testing. I feel like our program
 isn't so complex that it needs something like this to test it. I think that this could be an interesting conversation to have with the team.
 
+### 
+
 
 ## SE7
 
@@ -379,6 +381,24 @@ SE7 talks about effective leadership strategies focusing on time and energy mana
 ## Reflection and action items
 After reading this, I believe it's we should concentrate on the essential aspects of the chasten. With the semester coming to a close, it might be necessary to make a trade-off, sacrificing some quality-of-life features in favor of prioritizing the most critical tasks. This shift in focus will ensure we give our full attention to what matters
 
+### Week 10
+
+## FB8
+FB8 talks about how to parse inputs so you can achieve even better inputs. The book showd how effective parsing the inputs can be. In the book it refrenced a CSV file with information on cars and a function that can retrive the data from the CSV, then it gave the function data using a grammar fuzzer, this was the result
+
+```
+'9w9J\'/,LU<"l,|,Y,Zv)Amvx,c\n'	 Invalid entry
+'(n8].H7,qolS'	 not enough values to unpack (expected at least 4, got 2)
+'\nQoLWQ,jSa'	 not enough values to unpack (expected at least 4, got 2)
+'K1,\n,RE,fq,%,,sT+aAb'	 Invalid entry
+"m,d,,8j4'),-yQ,B7"	 Invalid entry
+'g4,s1\t[}{.,M,<,\nzd,.am'	 Invalid entry
+',Z[,z,c,#x1,gc.F'	 Invalid entry
+'pWs,rT`,R'	 not enough values to unpack (expected at least 4, got 3)
+'iN,br%,Q,R'	 Invalid entry
+'ol,\nH<\tn,^#,=A'	 Invalid entry
+```
+Even though the grammar has hints on what the proper inputs are it still could not generate proper inputs. With input parsing we would be able to generate even more accurate inputs.
 
 ## SE8
 
@@ -390,3 +410,67 @@ The text talks about the importance of rules and guidance in software developmen
 ## Reflection and Action items
 
 After reading this I thought back to the first few weeks of this class, to me if felt as if there was no guidance and we had to figure everything out on our own, but as the weeks went by we started to find our footing. What I found really interesting is the  use of tools like error checkers and formatters to ensure consistent rule adherence. How could we implent that into our work.
+
+
+
+### Week 11
+## FB9
+FB9 is about reducing and simplifying failure inducing inputs. The stratgey the book uses is called delta debugging. Delta debugging a technique used in software testing and debugging to isolate the cause of a failure by systematically narrowing down the input that triggers the failure. The idea is to iteratively reduce the input (delta) that leads to the failure until the minimal input causing the failure is identified.
+
+Here is an example 
+```python
+class DeltaDebuggingReducer(CachingReducer):
+    """Reduce inputs using delta debugging."""
+
+    def reduce(self, inp: str) -> str:
+        """Reduce input `inp` using delta debugging. Return reduced input."""
+
+        self.reset()
+        assert self.test(inp) != Runner.PASS
+
+        n = 2     # Initial granularity
+        while len(inp) >= 2:
+            start = 0.0
+            subset_length = len(inp) / n
+            some_complement_is_failing = False
+
+            while start < len(inp):
+                complement = inp[:int(start)] + \
+                    inp[int(start + subset_length):]
+
+                if self.test(complement) == Runner.FAIL:
+                    inp = complement
+                    n = max(n - 1, 2)
+                    some_complement_is_failing = True
+                    break
+
+                start += subset_length
+
+            if not some_complement_is_failing:
+                if n == len(inp):
+                    break
+                n = min(n * 2, len(inp))
+
+        return inp
+```
+
+## Reflection and Action Items
+Having more ways to reduce input erros is always a good thing. Even though we are close to the end of the semester I still think it would be a good idea to consider implementing this into our project.
+
+## SE9
+
+## Summary
+The article talks about the importance of code review at Google, emphasizing its role in maintaining code quality and consistency. It stresses the need for readable and simple code for easier understa,nding and long-term maintenance. Some benefits of code review,  is that it promotes a collaborative mindset professionalism , and constructive feedback. Knowledge sharing is also a  key aspect, and best practices like keeping changes small are recommended. The article categorizes different types of code reviews and underscores the overall importance of code review in ensuring developer satisfaction and efficient development.
+
+## Reflection and action items
+
+The article talks about the vital role of code review at Google. It highlights the need for professionalism, knowledge sharing, and the psychological benefits of constructive feedback. The action items suggest focusing on respectful communication, using reviews for learning, and embracing automation for efficiency. Keeping code changes small is recommended for a smoother process. We should try to consider these things when reviewing code.
+
+
+
+## DB1
+In debugging book 1 it talks about the basics of debugging. It gives some tips to help you debug code. Some examples are using the assert function, removing parts of your code to see if it works, and even using the scientific method to break down the problem. To my surprise the book says it's not a good idea to use print statements to try and debug you code, I disagree, even though it takes time it's still helpful
+
+
+## Reflection and Action items
+I already do most of the things that were talked about in the book but it was still nice to be reminded. It's always good to practice your debugging skills, maybe as a class we can come up with more tricks to help us debug code.
