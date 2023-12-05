@@ -466,7 +466,7 @@ The article talks about the importance of code review at Google, emphasizing its
 
 The article talks about the vital role of code review at Google. It highlights the need for professionalism, knowledge sharing, and the psychological benefits of constructive feedback. The action items suggest focusing on respectful communication, using reviews for learning, and embracing automation for efficiency. Keeping code changes small is recommended for a smoother process. We should try to consider these things when reviewing code.
 
-
+### DB1 and SE10
 
 ## DB1
 In debugging book 1 it talks about the basics of debugging. It gives some tips to help you debug code. Some examples are using the assert function, removing parts of your code to see if it works, and even using the scientific method to break down the problem. To my surprise the book says it's not a good idea to use print statements to try and debug you code, I disagree, even though it takes time it's still helpful
@@ -474,3 +474,31 @@ In debugging book 1 it talks about the basics of debugging. It gives some tips t
 
 ## Reflection and Action items
 I already do most of the things that were talked about in the book but it was still nice to be reminded. It's always good to practice your debugging skills, maybe as a class we can come up with more tricks to help us debug code.
+
+
+## SE10
+
+SE10 is about documentation.The first part of the document underscores the common frustration among engineers regarding the lack of quality documentation in software development. It highlights the need for engineers to take responsibility for writing documentation and introduces the idea of treating documentation like code. The importance of documentation in code comprehension, team focus, and onboarding is discussed. The challenges associated with documentation, such as delayed benefits and perceived difficulty, are explored. The section emphasizes the long-term benefits of documentation.
+
+## Reflection and Action Items
+
+As a class I think we should have some sort of universal way of documenting our code. We can make up some kind of guidelines so documenting code is easier. We have to keep in mind that we are working on two projects and people are doing different things, having good documentation will ensure that people will have a easy time understanding your code.
+
+
+### Week 14
+
+## DB2
+DB2 is about observeing a program during an execution. The book uses pythons ```python sys.settrace(traceit)``` to help. The traceit function looks like this
+
+```python
+
+def traceit(frame: FrameType, event: str, arg: Any) -> Optional[Callable]:
+    print(event, frame.f_lineno, frame.f_code.co_name, frame.f_locals)
+    return traceit
+  ```
+
+In this context, the "event" is a string indicating program occurrences, such as 'line' for the execution of a new line, 'call' for the initiation of a function call, and 'return' for the function's return. The "frame" parameter contains the present execution frame, encompassing the function and its local variables, including frame.f_lineno denoting the current line, frame.f_locals representing the current variables in a Python dictionary, and frame.f_code containing the current code as a Code object with attributes like frame.f_code.co_name indicating the current function's name. By printing out these values, we can easily obtain a trace of the program.
+
+
+## Reflection and Action Items
+This will be really helpful when we are debugging our code. By using tracing we will gain a better view of how code is executed. This will help us develop a stronger understanding of how our code works.

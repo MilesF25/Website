@@ -450,6 +450,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="week-11">Week 11</h3>
 </section>
 </section>
+<section id="fb9" class="level2">
+<h2 class="anchored" data-anchor-id="fb9">FB9</h2>
+<p>FB9 is about reducing and simplifying failure inducing inputs. The stratgey the book uses is called delta debugging. Delta debugging a technique used in software testing and debugging to isolate the cause of a failure by systematically narrowing down the input that triggers the failure. The idea is to iteratively reduce the input (delta) that leads to the failure until the minimal input causing the failure is identified.</p>
+<p>Here is an example</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> DeltaDebuggingReducer(CachingReducer):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Reduce inputs using delta debugging."""</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="bu">reduce</span>(<span class="va">self</span>, inp: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Reduce input `inp` using delta debugging. Return reduced input."""</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.reset()</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">assert</span> <span class="va">self</span>.test(inp) <span class="op">!=</span> Runner.PASS</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        n <span class="op">=</span> <span class="dv">2</span>     <span class="co"># Initial granularity</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> <span class="bu">len</span>(inp) <span class="op">&gt;=</span> <span class="dv">2</span>:</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>            start <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>            subset_length <span class="op">=</span> <span class="bu">len</span>(inp) <span class="op">/</span> n</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>            some_complement_is_failing <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> start <span class="op">&lt;</span> <span class="bu">len</span>(inp):</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>                complement <span class="op">=</span> inp[:<span class="bu">int</span>(start)] <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>                    inp[<span class="bu">int</span>(start <span class="op">+</span> subset_length):]</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> <span class="va">self</span>.test(complement) <span class="op">==</span> Runner.FAIL:</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>                    inp <span class="op">=</span> complement</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>                    n <span class="op">=</span> <span class="bu">max</span>(n <span class="op">-</span> <span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>                    some_complement_is_failing <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">break</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>                start <span class="op">+=</span> subset_length</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="kw">not</span> some_complement_is_failing:</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> n <span class="op">==</span> <span class="bu">len</span>(inp):</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">break</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>                n <span class="op">=</span> <span class="bu">min</span>(n <span class="op">*</span> <span class="dv">2</span>, <span class="bu">len</span>(inp))</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> inp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="reflection-and-action-items-11" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-and-action-items-11">Reflection and Action Items</h2>
+<p>Having more ways to reduce input erros is always a good thing. Even though we are close to the end of the semester I still think it would be a good idea to consider implementing this into our project.</p>
+</section>
 <section id="se9" class="level2">
 <h2 class="anchored" data-anchor-id="se9">SE9</h2>
 </section>
@@ -457,9 +499,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="summary-3">Summary</h2>
 <p>The article talks about the importance of code review at Google, emphasizing its role in maintaining code quality and consistency. It stresses the need for readable and simple code for easier understa,nding and long-term maintenance. Some benefits of code review, is that it promotes a collaborative mindset professionalism , and constructive feedback. Knowledge sharing is also a key aspect, and best practices like keeping changes small are recommended. The article categorizes different types of code reviews and underscores the overall importance of code review in ensuring developer satisfaction and efficient development.</p>
 </section>
-<section id="reflection-and-action-items-11" class="level2">
-<h2 class="anchored" data-anchor-id="reflection-and-action-items-11">Reflection and action items</h2>
+<section id="reflection-and-action-items-12" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-and-action-items-12">Reflection and action items</h2>
 <p>The article talks about the vital role of code review at Google. It highlights the need for professionalism, knowledge sharing, and the psychological benefits of constructive feedback. The action items suggest focusing on respectful communication, using reviews for learning, and embracing automation for efficiency. Keeping code changes small is recommended for a smoother process. We should try to consider these things when reviewing code.</p>
+<section id="db1-and-se10" class="level3">
+<h3 class="anchored" data-anchor-id="db1-and-se10">DB1 and SE10</h3>
+</section>
+</section>
+<section id="db1" class="level2">
+<h2 class="anchored" data-anchor-id="db1">DB1</h2>
+<p>In debugging book 1 it talks about the basics of debugging. It gives some tips to help you debug code. Some examples are using the assert function, removing parts of your code to see if it works, and even using the scientific method to break down the problem. To my surprise the book says it’s not a good idea to use print statements to try and debug you code, I disagree, even though it takes time it’s still helpful</p>
+</section>
+<section id="reflection-and-action-items-13" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-and-action-items-13">Reflection and Action items</h2>
+<p>I already do most of the things that were talked about in the book but it was still nice to be reminded. It’s always good to practice your debugging skills, maybe as a class we can come up with more tricks to help us debug code.</p>
+</section>
+<section id="se10" class="level2">
+<h2 class="anchored" data-anchor-id="se10">SE10</h2>
+<p>SE10 is about documentation.The first part of the document underscores the common frustration among engineers regarding the lack of quality documentation in software development. It highlights the need for engineers to take responsibility for writing documentation and introduces the idea of treating documentation like code. The importance of documentation in code comprehension, team focus, and onboarding is discussed. The challenges associated with documentation, such as delayed benefits and perceived difficulty, are explored. The section emphasizes the long-term benefits of documentation.</p>
+</section>
+<section id="reflection-and-action-items-14" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-and-action-items-14">Reflection and Action Items</h2>
+<p>As a class I think we should have some sort of universal way of documenting our code. We can make up some kind of guidelines so documenting code is easier. We have to keep in mind that we are working on two projects and people are doing different things, having good documentation will ensure that people will have a easy time understanding your code.</p>
+<section id="week-14" class="level3">
+<h3 class="anchored" data-anchor-id="week-14">Week 14</h3>
+</section>
+</section>
+<section id="db2" class="level2">
+<h2 class="anchored" data-anchor-id="db2">DB2</h2>
+<p>DB2 is about observeing a program during an execution. The book uses pythons <code>python sys.settrace(traceit)</code> to help. The traceit function looks like this</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> traceit(frame: FrameType, event: <span class="bu">str</span>, arg: Any) <span class="op">-&gt;</span> Optional[Callable]:</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(event, frame.f_lineno, frame.f_code.co_name, frame.f_locals)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> traceit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this context, the “event” is a string indicating program occurrences, such as ‘line’ for the execution of a new line, ‘call’ for the initiation of a function call, and ‘return’ for the function’s return. The “frame” parameter contains the present execution frame, encompassing the function and its local variables, including frame.f_lineno denoting the current line, frame.f_locals representing the current variables in a Python dictionary, and frame.f_code containing the current code as a Code object with attributes like frame.f_code.co_name indicating the current function’s name. By printing out these values, we can easily obtain a trace of the program.</p>
+</section>
+<section id="reflection-and-action-items-15" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-and-action-items-15">Reflection and Action Items</h2>
+<p>This will be really helpful when we are debugging our code. By using tracing we will gain a better view of how code is executed. This will help us develop a stronger understanding of how our code works.</p>
 </section>
 </section>
 
