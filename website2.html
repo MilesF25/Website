@@ -406,23 +406,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="reflection-and-action-items-8">Reflection and Action Items</h3>
 <p>I think that it goes without saying having a more efficient way to fuzz our code is a good thing. It is a good idea to have a way to give our program decent inputs to test instead of throwing random inputs at it. That being said I don’t think chasten needs this kind of testing. I feel like our program isn’t so complex that it needs something like this to test it. I think that this could be an interesting conversation to have with the team.</p>
 </section>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
-</section>
 </section>
 <section id="se7" class="level2">
 <h2 class="anchored" data-anchor-id="se7">SE7</h2>
 <p>SE7 talks about effective leadership strategies focusing on time and energy management for leaders facing overwhelming responsibilities. It emphasizes three core principles, Always Be Deciding, where leaders navigate ambiguous problems by making informed trade-offs; Always Be Leaving, encouraging the development of self-sufficient teams that can handle challenges independently; and Always Be Scaling, advising proactive management of increasing responsibilities to protect personal resources. The talks about the importance of deliberately dropping lower-priority tasks, allowing leaders to focus on critical responsibilities. It also highlights the significance of protecting workers energy through strategic disconnection, breaks, and rejuvenating vacations.</p>
-</section>
-<section id="reflection-and-action-items-9" class="level2">
-<h2 class="anchored" data-anchor-id="reflection-and-action-items-9">Reflection and action items</h2>
+<section id="reflection-and-action-items-9" class="level3">
+<h3 class="anchored" data-anchor-id="reflection-and-action-items-9">Reflection and action items</h3>
 <p>After reading this, I believe it’s we should concentrate on the essential aspects of the chasten. With the semester coming to a close, it might be necessary to make a trade-off, sacrificing some quality-of-life features in favor of prioritizing the most critical tasks. This shift in focus will ensure we give our full attention to what matters</p>
-<section id="week-10" class="level3">
-<h3 class="anchored" data-anchor-id="week-10">Week 10</h3>
 </section>
 </section>
-<section id="fb8" class="level2">
-<h2 class="anchored" data-anchor-id="fb8">FB8</h2>
+<section id="week-10" class="level2">
+<h2 class="anchored" data-anchor-id="week-10">Week 10</h2>
+<section id="fb8" class="level3">
+<h3 class="anchored" data-anchor-id="fb8">FB8</h3>
 <p>FB8 talks about how to parse inputs so you can achieve even better inputs. The book showd how effective parsing the inputs can be. In the book it refrenced a CSV file with information on cars and a function that can retrive the data from the CSV, then it gave the function data using a grammar fuzzer, this was the result</p>
 <pre><code>'9w9J\'/,LU&lt;"l,|,Y,Zv)Amvx,c\n'  Invalid entry
 '(n8].H7,qolS'   not enough values to unpack (expected at least 4, got 2)
@@ -436,22 +432,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 'ol,\nH&lt;\tn,^#,=A'   Invalid entry</code></pre>
 <p>Even though the grammar has hints on what the proper inputs are it still could not generate proper inputs. With input parsing we would be able to generate even more accurate inputs.</p>
 </section>
+</section>
 <section id="se8" class="level2">
 <h2 class="anchored" data-anchor-id="se8">SE8</h2>
-</section>
-<section id="reflection" class="level2">
-<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<section id="summary-3" class="level3">
+<h3 class="anchored" data-anchor-id="summary-3">Summary</h3>
 <p>The text talks about the importance of rules and guidance in software development at a large company like Google. Rules are vital for maintaining a scalable codebase, while guidance offers distilled best practices from experience. It emphasizes the need for educational resources to help engineers understand how programming languages are used within Google’s codebase. Automated tools, such as error checkers and code formatters, are encouraged to enforce rules and ensure consistency. The implementation of tools like gofmt for Go streamlined formatting and readability. Essentially, rules, coupled with guidance, educational support, and automated enforcement, form the key components for managing complexity and sustaining a healthy codebase in a large engineering organization.</p>
 </section>
-<section id="reflection-and-action-items-10" class="level2">
-<h2 class="anchored" data-anchor-id="reflection-and-action-items-10">Reflection and Action items</h2>
+<section id="reflection-and-action-items-10" class="level3">
+<h3 class="anchored" data-anchor-id="reflection-and-action-items-10">Reflection and Action items</h3>
 <p>After reading this I thought back to the first few weeks of this class, to me if felt as if there was no guidance and we had to figure everything out on our own, but as the weeks went by we started to find our footing. What I found really interesting is the use of tools like error checkers and formatters to ensure consistent rule adherence. How could we implent that into our work.</p>
-<section id="week-11" class="level3">
-<h3 class="anchored" data-anchor-id="week-11">Week 11</h3>
 </section>
 </section>
-<section id="fb9" class="level2">
-<h2 class="anchored" data-anchor-id="fb9">FB9</h2>
+<section id="week-11" class="level2">
+<h2 class="anchored" data-anchor-id="week-11">Week 11</h2>
+<section id="fb9" class="level3">
+<h3 class="anchored" data-anchor-id="fb9">FB9</h3>
 <p>FB9 is about reducing and simplifying failure inducing inputs. The stratgey the book uses is called delta debugging. Delta debugging a technique used in software testing and debugging to isolate the cause of a failure by systematically narrowing down the input that triggers the failure. The idea is to iteratively reduce the input (delta) that leads to the failure until the minimal input causing the failure is identified.</p>
 <p>Here is an example</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> DeltaDebuggingReducer(CachingReducer):</span>
@@ -488,27 +484,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> inp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="reflection-and-action-items-11" class="level2">
-<h2 class="anchored" data-anchor-id="reflection-and-action-items-11">Reflection and Action Items</h2>
+<section id="reflection-and-action-items-11" class="level3">
+<h3 class="anchored" data-anchor-id="reflection-and-action-items-11">Reflection and Action Items</h3>
 <p>Having more ways to reduce input erros is always a good thing. Even though we are close to the end of the semester I still think it would be a good idea to consider implementing this into our project.</p>
+</section>
 </section>
 <section id="se9" class="level2">
 <h2 class="anchored" data-anchor-id="se9">SE9</h2>
-</section>
-<section id="summary-3" class="level2">
-<h2 class="anchored" data-anchor-id="summary-3">Summary</h2>
+<section id="summary-4" class="level3">
+<h3 class="anchored" data-anchor-id="summary-4">Summary</h3>
 <p>The article talks about the importance of code review at Google, emphasizing its role in maintaining code quality and consistency. It stresses the need for readable and simple code for easier understa,nding and long-term maintenance. Some benefits of code review, is that it promotes a collaborative mindset professionalism , and constructive feedback. Knowledge sharing is also a key aspect, and best practices like keeping changes small are recommended. The article categorizes different types of code reviews and underscores the overall importance of code review in ensuring developer satisfaction and efficient development.</p>
+</section>
 </section>
 <section id="reflection-and-action-items-12" class="level2">
 <h2 class="anchored" data-anchor-id="reflection-and-action-items-12">Reflection and action items</h2>
 <p>The article talks about the vital role of code review at Google. It highlights the need for professionalism, knowledge sharing, and the psychological benefits of constructive feedback. The action items suggest focusing on respectful communication, using reviews for learning, and embracing automation for efficiency. Keeping code changes small is recommended for a smoother process. We should try to consider these things when reviewing code.</p>
-<section id="db1-and-se10" class="level3">
-<h3 class="anchored" data-anchor-id="db1-and-se10">DB1 and SE10</h3>
 </section>
-</section>
-<section id="db1" class="level2">
-<h2 class="anchored" data-anchor-id="db1">DB1</h2>
+<section id="week-12" class="level2">
+<h2 class="anchored" data-anchor-id="week-12">Week 12</h2>
+<section id="db1" class="level3">
+<h3 class="anchored" data-anchor-id="db1">DB1</h3>
 <p>In debugging book 1 it talks about the basics of debugging. It gives some tips to help you debug code. Some examples are using the assert function, removing parts of your code to see if it works, and even using the scientific method to break down the problem. To my surprise the book says it’s not a good idea to use print statements to try and debug you code, I disagree, even though it takes time it’s still helpful</p>
+</section>
 </section>
 <section id="reflection-and-action-items-13" class="level2">
 <h2 class="anchored" data-anchor-id="reflection-and-action-items-13">Reflection and Action items</h2>
@@ -537,6 +534,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="reflection-and-action-items-15" class="level2">
 <h2 class="anchored" data-anchor-id="reflection-and-action-items-15">Reflection and Action Items</h2>
 <p>This will be really helpful when we are debugging our code. By using tracing we will gain a better view of how code is executed. This will help us develop a stronger understanding of how our code works.</p>
+<section id="se11" class="level3">
+<h3 class="anchored" data-anchor-id="se11">SE11</h3>
+<p>SE11 talks about Google’s approach to automated testing is explored, emphasizing its transformative impact on software engineering practices. The evolution from a lack of automated testing to a strong testing culture is detailed, featuring initiatives like Test Certified and the unconventional Testing on the Toilet. The current testing culture at Google involves mandatory code reviews with both feature code and tests, the use of the Project Health (pH) tool.</p>
+</section>
+</section>
+<section id="reflection-and-action-items-16" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-and-action-items-16">Reflection and Action items</h2>
+<p>The journey of Google’s testing culture highlights the power of organic adoption over mandates. By fostering a culture where engineers voluntarily embraced testing, Google achieved a lasting transformation. The emphasis on continuous improvement through initiatives like Test Certified and the quirky Testing on the Toilet played crucial roles. The reflection prompts a consideration of how these principles could be applied in other organizational contexts. Action items include encouraging a testing culture through education, creating certification programs for gradual improvement, and exploring unconventional methods to raise awareness, fostering a mindset where testing is viewed as an integral part of the development process. The importance of balancing automated testing with human judgment is a valuable takeaway, prompting a reassessment of testing strategies to ensure comprehensive coverage.</p>
+</section>
+<section id="week-15" class="level2">
+<h2 class="anchored" data-anchor-id="week-15">Week 15</h2>
+<section id="db3" class="level3">
+<h3 class="anchored" data-anchor-id="db3">DB3</h3>
+<p>DB3 is about assertions. Python has a method called assert. Assert let’s us make sure that our code will produce the intended output. A simple of example of assert being used.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_square_root() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> square_root(<span class="dv">4</span>) <span class="op">==</span> <span class="dv">2</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> square_root(<span class="dv">9</span>) <span class="op">==</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This function will make sure that the square root function will produce the intended output, if it doesn’t it will raise an error. The book also talked about preconditions and postconditions.</p>
+<p>An example of preconditions with a function that uses the Newton Raphson method</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> square_root(x):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> x <span class="op">&gt;=</span> <span class="dv">0</span>  <span class="co"># precondition</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    approx <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    guess <span class="op">=</span> x <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> approx <span class="op">!=</span> guess:</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>        approx <span class="op">=</span> guess</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        guess <span class="op">=</span> (approx <span class="op">+</span> x <span class="op">/</span> approx) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> math.isclose(approx <span class="op">*</span> approx, x)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> approx</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can see here that assert is used at the beginning of the function. If x is greater than 0, If it’s not then the program won’t run.</p>
+<p>this a function example of postconditions</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> square_root(x):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> x <span class="op">&gt;=</span> <span class="dv">0</span>  <span class="co"># precondition</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    approx <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    guess <span class="op">=</span> x <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> approx <span class="op">!=</span> guess:</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>        approx <span class="op">=</span> guess</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>        guess <span class="op">=</span> (approx <span class="op">+</span> x <span class="op">/</span> approx) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> math.isclose(approx <span class="op">*</span> approx, x)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> approx</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Above the return statement is the assert statement. It’s the same concept as precondtion but this time it’s checking at the end of the function for the intended result.</p>
+</section>
+</section>
+<section id="reflection-and-action-items-17" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-and-action-items-17">Reflection and Action items</h2>
+<p>I’m positive that most of us have used assert at least once before, it’s a simple thing to understand. Assert is a very useful tool and using it can help strengthen your code. There is not much for action items, I know we used assert when making our test functions, my only recommendation is to use more of them.</p>
+</section>
+<section id="week-16" class="level2">
+<h2 class="anchored" data-anchor-id="week-16">Week 16</h2>
 </section>
 </section>
 

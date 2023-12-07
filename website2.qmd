@@ -506,13 +506,68 @@ This will be really helpful when we are debugging our code. By using tracing we 
 
 ### SE11
 
+SE11 talks about Google's approach to automated testing is explored, emphasizing its transformative impact on software engineering practices. The evolution from a lack of automated testing to a strong testing culture is detailed, featuring initiatives like Test Certified and the unconventional Testing on the Toilet. The current testing culture at Google involves mandatory code reviews with both feature code and tests, the use of the Project Health (pH) tool.
 
+## Reflection and Action items
+
+The journey of Google's testing culture highlights the power of organic adoption over mandates. By fostering a culture where engineers voluntarily embraced testing, Google achieved a lasting transformation. The emphasis on continuous improvement through initiatives like Test Certified and the quirky Testing on the Toilet played crucial roles. The reflection prompts a consideration of how these principles could be applied in other organizational contexts. Action items include encouraging a testing culture through education, creating certification programs for gradual improvement, and exploring unconventional methods to raise awareness, fostering a mindset where testing is viewed as an integral part of the development process. The importance of balancing automated testing with human judgment is a valuable takeaway, prompting a reassessment of testing strategies to ensure comprehensive coverage.
 
 
 
 ## Week 15
 
+### DB3
 
+DB3 is about assertions. Python has a method called assert. Assert let's us make sure that our code will produce the intended output. A simple of example of assert being used.
+
+```python
+
+def test_square_root() -> None:
+    assert square_root(4) == 2
+    assert square_root(9) == 3
+```
+This function will make sure that the square root function will produce the intended output, if it doesn't it will raise an error. The book also talked about preconditions and postconditions.
+
+An example of preconditions with a function that uses the Newton Raphson method
+
+```python
+def square_root(x):
+    assert x >= 0  # precondition
+
+    approx = None
+    guess = x / 2
+    while approx != guess:
+        approx = guess
+        guess = (approx + x / approx) / 2
+
+    assert math.isclose(approx * approx, x)
+    return approx
+```
+
+You can see here that assert is used at the beginning of the function. If x is greater than 0, If it's not then the program won't run.
+
+
+this a function example of postconditions
+```python
+def square_root(x):
+    assert x >= 0  # precondition
+
+    approx = None
+    guess = x / 2
+    while approx != guess:
+        approx = guess
+        guess = (approx + x / approx) / 2
+
+    assert math.isclose(approx * approx, x)
+    return approx
+```
+
+Above the return statement is the assert statement. It's the same concept as precondtion but this time it's checking at the end of the function
+for the intended result.
+
+## Reflection and Action items
+
+I'm positive that most of us have used assert at least once before, it's a simple thing to understand. Assert is a very useful tool and using it can help strengthen your code. There is not much for action items, I know we used assert when making our test functions, my only recommendation is to use more of them.
 
 
 
